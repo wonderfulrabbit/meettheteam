@@ -1,0 +1,40 @@
+varik:
+    name: Varik Ashford 
+    level: 5
+    player: Kurosagi (Kuro)
+    traits:
+        identity: Chamán de los cuatro fuegos
+        origin: Ciudad maldita de Kazgrin (Goblins)
+        theme: Deber "Es mi destino romper la maldición de Kazgrin"
+    stats:
+        dex: 6
+        ins: 10
+        mig: 6
+        wlp: 10
+onix:
+    name: Onix Silvaférrea
+    player: Siriat
+    level: 5
+    traits:
+        identity: Brujo de la flora salvaje
+        origin: Yur'Zhan, el corazón salvaje (Jungla)
+        theme: Misericordia "Brindaré mi ayuda a quien la necesite, siempre que no altere el equilibrio del ciclo natural."
+    stats:
+        dex: 6
+        ins: 10
+        mig: 6
+        wlp: 10
+sylrith:
+    name: Sylrith
+    player: Pokerface
+    level: 5
+    traits:
+        identity: "?"
+        origin: Nox Flora, el bosque encantado
+        theme: "?"
+    stats:
+        dex: 1
+        ins: 1
+        mig: 1
+        wlp: 1
+    
