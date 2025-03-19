@@ -33,10 +33,10 @@ sylrith:
         origin: Nox Flora, el bosque encantado
         theme: "?"
     stats:
-        dex: 1
-        ins: 1
-        mig: 1
-        wlp: 1
+        dex: 10
+        ins: 8
+        mig: 6
+        wlp: 8
 camilla:
     name: Camilla
     level: 5
