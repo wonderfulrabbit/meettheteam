@@ -40,11 +40,11 @@ sylrith:
 camilla:
     name: Camilla
     level: 5
-    player: Kurosagi (Kuro)
+    player: Yoman
     traits:
         identity: Aspirante a aventurera
         origin: Aldea Arkera, villa rural dedicada a la pesca y caza
-        theme: ?
+        theme: unknown
     stats:
         dex: 8
         ins: 10
