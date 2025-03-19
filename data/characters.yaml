@@ -44,10 +44,9 @@ camilla:
     traits:
         identity: Aspirante a aventurera
         origin: Aldea Arkera, villa rural dedicada a la pesca y caza
-        theme: unknown
+        theme: "?"
     stats:
         dex: 8
-        ins: 10
+        ins: 6
         mig: 10
         wlp: 8
-    
