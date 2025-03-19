@@ -37,4 +37,17 @@ sylrith:
         ins: 1
         mig: 1
         wlp: 1
+camilla:
+    name: Camilla
+    level: 5
+    player: Kurosagi (Kuro)
+    traits:
+        identity: Aspirante a aventurera
+        origin: Aldea Arkera, villa rural dedicada a la pesca y caza
+        theme: ?
+    stats:
+        dex: 8
+        ins: 10
+        mig: 10
+        wlp: 8
     
