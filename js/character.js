@@ -110,6 +110,8 @@ export class Character {
         const equipCards = document.getElementById('equip-cards');
         const stats = this.base.stats;
         const { mainhand, offhand } = this.equipment;
+
+        equipCards.innerHTML = "";
     
         // Si el arma principal tiene propiedad de defensa, se crea su tarjeta
         if (mainhand?.defense) {
@@ -125,6 +127,9 @@ export class Character {
     
         // Obtener el contenedor de hechizos y agregar cada tarjeta de hechizo
         const spellCards = document.getElementById('spell-cards');
+
+        spellCards.innerHTML = "";
+
         Object.values(this.attacks).forEach(attack => {
             const card = new Card(attack.name, attack, stats);
             spellCards.appendChild(card.Show);
