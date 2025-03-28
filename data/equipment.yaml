@@ -40,12 +40,28 @@ sylrith:
     name: ""
   accessory:
     name: ""
-    
+
 camilla:
   mainhand:
-    name: ""
+    name: Espada de Bronce
+    type: melee
+    tags:
+      - Espada Marcial
+      - Una mano
+      - Cuerpo a cuerpo
+    stat1: DEX
+    stat2: MIG
+    defense: DEF
+    attackbonus: 2
+    damagebonus: 6
+    damagetype: daño físico
+    description: >
+      Una espada hecha de bronce. Maestría Cuerpo a Cuerpo: +1 ataque ya aplicado.
   offhand:
-    name: ""
+    name: Escudo Rúnico
+    bonus:
+      def: 2
+      mdef: 2
   armor: 
     name: ""
   accessory:

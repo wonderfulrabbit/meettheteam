@@ -45,8 +45,8 @@ export class Character {
         document.querySelector(`#combat-mp`).innerHTML = this.base.level + 5 * this.base.stats.wlp + this.abilities.class1.bonus.mp + this.abilities.class2.bonus.mp;
         document.querySelector(`#combat-ip`).innerHTML = 6; 
         document.querySelector(`#combat-extrainit`).innerHTML = 0; 
-        document.querySelector(`#combat-def`).innerHTML = this.base.stats.dex; 
-        document.querySelector(`#combat-mdef`).innerHTML = this.base.stats.ins; 
+        document.querySelector(`#combat-def`).innerHTML = this.base.stats.dex + (this.equipment.offhand?.bonus?.def || 0); 
+        document.querySelector(`#combat-mdef`).innerHTML = this.base.stats.ins + (this.equipment.offhand?.bonus?.mdef || 0); 
     }
 
     #updateEquipmentHTML() {

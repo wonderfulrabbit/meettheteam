@@ -228,7 +228,7 @@ camilla:
         resuelto completamente su ataque). Este ataque debe ser cuerpo a cuerpo y tener a ese enemigo 
         como único objetivo; trata tu Tirada Alta (HR) como 0 al calcular el daño causado por este ataque.
     meleeweaponmastery:
-      name: Maestría con Armas Cuerpo a Cuerpo
+      name: Maestría Cuerpo a Cuerpo
       type: ability
       level: 1
       tags:

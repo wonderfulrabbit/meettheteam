@@ -60,7 +60,7 @@ export class Card {
         if (this.attack.type == "melee" || this.attack.type == "ranged" || this.attack.type == "spell") {
             const { stat1, stat2, attackbonus, defense, damagebonus, damagetype, description } = attack;
             const contentParts = [
-                `<b>Attack:</b> ${stat1} + ${stat2} ${attackbonus ? attackbonus + " " : ""}vs ${defense}`,
+                `<b>Attack:</b> ${stat1} + ${stat2} + ${attackbonus ? attackbonus + " " : ""}vs ${defense}`,
                 `<b>Damage:</b> HR + ${damagebonus} ${damagetype}`,
                 description ? `<em>${description}</em>` : ""
             ];
