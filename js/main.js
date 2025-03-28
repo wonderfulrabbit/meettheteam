@@ -1,12 +1,13 @@
-import { initializeNavigation } from "./navigation.js";
-import { initializeDropdown } from "./dropdown.js";
-import { initializeStatRoll } from "./diceroll.js";
-import { loadData } from "./dataLoader.js";
+import { loadCharacterNames, loadCharacters } from "./dataLoader.js";
+import { initializeDropdown } from "./elements/dropdown.js";
+import { initializeNav } from "./elements/navigator.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-    initializeNavigation();
+document.addEventListener("DOMContentLoaded", async () => {
+    // Get variables
+    await loadCharacterNames();
+    await loadCharacters();
+
+    // Initialize elements
     initializeDropdown();
-    initializeStatRoll();
-    loadData();
+    initializeNav();
 });
-

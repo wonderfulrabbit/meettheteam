@@ -1,0 +1,52 @@
+varik:
+  mainhand:
+    name: Bastón
+    type: melee
+    tags:
+      - Arma Arcana
+      - Dos manos
+      - Cuerpo a cuerpo
+    stat1: WLP
+    stat2: WLP
+    defense: DEF
+    attackbonus: 0
+    damagebonus: 6
+    damagetype: daño físico
+    description: >
+      Un bastón largo para su tamaño, tallado con símbolos arcanos
+  offhand:
+    name: ""
+  armor: 
+    name: Túnica Tribal
+  accessory:
+    name: ""
+
+onix:
+  mainhand:
+    name: ""
+  offhand:
+    name: ""
+  armor: 
+    name: ""
+  accessory:
+    name: ""
+
+sylrith:
+  mainhand:
+    name: ""
+  offhand:
+    name: ""
+  armor: 
+    name: ""
+  accessory:
+    name: ""
+    
+camilla:
+  mainhand:
+    name: ""
+  offhand:
+    name: ""
+  armor: 
+    name: ""
+  accessory:
+    name: ""

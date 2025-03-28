@@ -24,7 +24,7 @@
 	<button id="btn-stats">	<i class="fa-solid fa-chart-simple"></i> </button>
 	<button id="btn-survivality"> <i class="fa-solid fa-shield-halved"></i> </button>
 	<button id="btn-assets"> <i class="fa-solid fa-sack-dollar"></i>	</button>
-	<button id="btn-passives"> <i class="fa-solid fa-brain"></i> </button>
+	<button id="btn-build"> <i class="fa-solid fa-brain"></i> </button>
 	<button id="btn-actives"> <i class="fa-solid fa-hand-fist"></i> </button>
 </nav>
 
@@ -105,33 +105,6 @@
 			<i class="fa-solid fa-dice"></i>
 		</button>
 	</div>
-
-	<h3>Lazos</h3>
-
-	<div class="grid">
-		<input type="text" id="bond-target-1" readonly>
-		<input type="text" id="bond-type-1" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-2" readonly>
-		<input type="text" id="bond-type-2" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-3" readonly>
-		<input type="text" id="bond-type-3" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-4" readonly>
-		<input type="text" id="bond-type-4" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-5" readonly>
-		<input type="text" id="bond-type-5" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-6" readonly>
-		<input type="text" id="bond-type-6"  readonly>
-	</div>
 </section>
 
 <section id="section-survivality" class="section">
@@ -175,14 +148,79 @@
 
 <section id="section-assets" class="section">
 	<h2>Equipamiento</h2>
+
+	<div class="grid">
+		<div class="data-container">
+			<div for="equip-mainhand" class="floating-label">Mano Principal</div>
+			<div id="equip-mainhand" class="data"></div>
+		</div>
+		<div class="data-container">
+			<div for="equip-armor" class="floating-label">Armadura</div>
+			<div id="equip-armor" class="data"></div>
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="data-container">
+			<div for="equip-offhand" class="floating-label">Mano Secundaria</div>
+			<div id="equip-offhand" class="data"></div>
+		</div>
+		<div class="data-container">
+			<div for="equip-accessory" class="floating-label">Accesorio</div>
+			<div id="equip-accessory" class="data"></div>
+		</div>
+	</div>
+
+	<h3>Lazos</h3>
+
+	<div class="grid">
+		<input type="text" id="bond-target-1" readonly>
+		<input type="text" id="bond-type-1" readonly>
+	</div>
+	<div class="grid">
+		<input type="text" id="bond-target-2" readonly>
+		<input type="text" id="bond-type-2" readonly>
+	</div>
+	<div class="grid">
+		<input type="text" id="bond-target-3" readonly>
+		<input type="text" id="bond-type-3" readonly>
+	</div>
+	<div class="grid">
+		<input type="text" id="bond-target-4" readonly>
+		<input type="text" id="bond-type-4" readonly>
+	</div>
+	<div class="grid">
+		<input type="text" id="bond-target-5" readonly>
+		<input type="text" id="bond-type-5" readonly>
+	</div>
+	<div class="grid">
+		<input type="text" id="bond-target-6" readonly>
+		<input type="text" id="bond-type-6"  readonly>
+	</div>
 </section>
 
-<section id="section-passives" class="section">
-	<h2>Habilidades Pasivas</h2>
+<section id="section-build" class="section">
+	<h2>Clases</h2>
+	<div class="grid">
+		<div class="data-container">
+			<div for="build-class-1" class="floating-label">Clase 1</div>
+			<div id="build-class-1" class="data"></div>
+		</div>
+		<div class="data-container">
+			<div for="build-class-2" class="floating-label">Clase 2</div>
+			<div id="build-class-2" class="data"></div>
+		</div>
+	</div>
+
+	<h3>Habilidades</h3>
+	<div id="build-container"></div>
 </section>
 
 <section id="section-actives" class="section">
 	<h2>Acciones</h2>
+
+	<div id="equip-cards"></div>
+	<div id="spell-cards"></div>
 </section>
 	
 </div>

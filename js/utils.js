@@ -1,29 +1,18 @@
-export function middle(a, b, c) {
-    return [a, b, c].sort((x, y) => x - y)[1];
+export function toTitleCase(string) {
+   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export function contentMaker(e) {
-    return [
-        e.limited ? `<b>Limited:</b> ${e.limited}` : "",
-        e.target ? `<b>Target:</b> ${e.target}` : "", 
-        e.special ? `<b>Special:</b> ${e.special}` : "", 
-        e.trigger ? `<b>Trigger:</b> ${e.trigger}` : "",
-        e.attack ? `<b>Attack:</b> ${e.attack}` : "", 
-        e.hit ? `<b>Hit:</b> ${e.hit}` : "", 
-        e.miss ? `<b>Miss:</b> ${e.miss}` : "", 
-        e.effect ? `<b>Effect:</b> ${e.effect}` : ""
-    ].filter(Boolean).join("<br>");
-}
-
-export function createCopyButton(onClick) {
-    const footer = document.createElement("footer");
-    footer.setAttribute("role", "button");
-    footer.classList.add("contrast");
-
-    const icon = document.createElement("i");
-    icon.classList.add("fa-solid", "fa-copy");
-
-    footer.appendChild(icon);
-    footer.addEventListener("click", onClick);
-    return footer;
-}
+export function darkenRGB(rgbString, factor = 0.8) {
+   // Extract the x, y, z values using regex.
+   const regex = /rgb\((\d+),\s*(\d+),\s*(\d+)\)/i;
+   const match = rgbString.match(regex);
+   if (!match) return rgbString; // If no match, return the original string.
+ 
+   // Parse the RGB components and darken them.
+   const r = Math.floor(parseInt(match[1], 10) * factor);
+   const g = Math.floor(parseInt(match[2], 10) * factor);
+   const b = Math.floor(parseInt(match[3], 10) * factor);
+ 
+   // Return the new rgb string.
+   return `rgb(${r}, ${g}, ${b})`;
+ } 

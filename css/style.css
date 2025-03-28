@@ -249,7 +249,6 @@ h3 {
     left: 0.6rem;
     font-size: 0.85rem;
     color: #9ca3af;
-    background: #374151;
     padding: 0 5px;
 	z-index: 1;
 }
@@ -281,7 +280,7 @@ h3 {
 }
 
 .tag {
-	background-color: var(--tag-background);
+	background-color: #84991079;
 	color: #e5e7eb;
 	font-size: 0.75rem;
 	padding: 0.25rem;

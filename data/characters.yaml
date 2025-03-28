@@ -20,10 +20,10 @@ onix:
         origin: Yur'Zhan, el corazón salvaje (Jungla)
         theme: Misericordia "Brindaré mi ayuda a quien la necesite, siempre que no altere el equilibrio del ciclo natural."
     stats:
-        dex: 6
+        dex: 8
         ins: 10
         mig: 6
-        wlp: 10
+        wlp: 8
 sylrith:
     name: Sylrith
     player: Pokerface
@@ -31,7 +31,7 @@ sylrith:
     traits:
         identity: "?"
         origin: Nox Flora, el bosque encantado
-        theme: "?"
+        theme: Culpa "No importa cuanto tiempo me tome... Encontraré la manera de limpiar mi pecado."
     stats:
         dex: 10
         ins: 8

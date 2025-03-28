@@ -1,24 +1,44 @@
-import { updateCharacterSelect, changeCharacter } from "./character.js";
 import 'https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js';
+import { Character } from "./character.js";
+import { toTitleCase } from "./utils.js";
 
+export let characterNames = {};
 export let characters = {};
-export let classes = {};
-export let abilities = {};
 
-export async function loadData() {
-    const response = await fetch("../data/characters.yaml");
-    const classResponse = await fetch("../data/classes.yaml");
-    const abilityResponse = await fetch("../data/abilities.yaml");
+export async function loadCharacterNames() {
+    const { characterList } = await loadLists();
 
-    const characterData = await response.text();
-    const classData = await classResponse.text();
-    const abilityData = await abilityResponse.text();
+    characterNames = Object.entries(characterList).map(([id, character]) => ({
+        id: id, 
+        value: character.name || toTitleCase(id)
+    }));
+}
 
-    characters = jsyaml.load(characterData);
-    classes = jsyaml.load(classData);
-    abilities =  jsyaml.load(abilityData);
+export async function loadCharacters() {
+    const { characterList, equipmentList, abilityList, attackList } = await loadLists();
 
-    const characterList = Object.keys(characters);
-    updateCharacterSelect(characterList);
-    changeCharacter(characterList[0]);
+    characters = Object.keys(characterList).reduce((acc, name) => {
+        acc[name] = new Character(
+            characterList[name],
+            equipmentList[name] || {}, 
+            abilityList[name] || {},
+            attackList[name] || {}
+        );
+        return acc;
+    }, {});
+}
+
+async function loadLists() {
+    const characterList = await loadYAML("../data/characters.yaml");
+    const equipmentList = await loadYAML("../data/equipment.yaml");
+    const abilityList = await loadYAML("../data/abilities.yaml");
+    const attackList = await loadYAML("../data/attacks.yaml");
+
+    return { characterList, equipmentList, abilityList, attackList };
+}
+
+async function loadYAML(location) {
+    const response = await fetch(location);
+    const responseData = await response.text();
+    return jsyaml.load(responseData);
 }

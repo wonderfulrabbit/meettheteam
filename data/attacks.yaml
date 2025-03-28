@@ -1,0 +1,17 @@
+varik:
+  flare:
+    name: Fuego Infernal
+    type: spell
+    tags:
+      - Hechizo
+      - 20 Mana
+      - Un objetivo
+      - Instantáneo
+    stat1: INS
+    stat2: WLP
+    defense: MDEF
+    attackbonus: 6
+    damagebonus: 25
+    damagetype: daño de fuego
+    description: >
+      El daño causado por este hechizo ignora las resistencias.
