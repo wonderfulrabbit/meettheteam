@@ -125,7 +125,7 @@ sylrith:
   class1:
     name: Arquero
     level: 2
-    color: rgb(30, 140, 80)
+    color: rgb(36, 89, 81)
     benefits:
       - Incrementa tus Puntos de Vida en 5.
       - Puedes usar Armas de Rango Marciales y Escudos Marciales
@@ -135,7 +135,7 @@ sylrith:
   class2:
     name: Invocador
     level: 2
-    color: rgb(160, 70, 40)
+    color: rgb(141, 47, 105)
     benefits:
       - Incrementa tus Puntos de Mana en 5.
     bonus:
