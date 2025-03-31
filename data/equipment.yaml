@@ -32,8 +32,21 @@ onix:
     name: ""
 
 sylrith:
-  mainhand:
-    name: ""
+  mainhand: 
+    name: "Arco de mano"
+    type: range
+    tags:
+      - Arma de arco
+      - Una mano
+      - Rango
+    stat1: DEX
+    stat2: DEX
+    defense: DEF
+    attackbonus: 4
+    damagebonus: 8
+    damagetype: daño físico
+    description: >
+      Un arco simple y versátil, ideal para combates a distancia.
   offhand:
     name: ""
   armor: 
