@@ -45,7 +45,11 @@ export class Character {
         document.querySelector(`#combat-mp`).innerHTML = this.base.level + 5 * this.base.stats.wlp + this.abilities.class1.bonus.mp + this.abilities.class2.bonus.mp;
         document.querySelector(`#combat-ip`).innerHTML = 6; 
         document.querySelector(`#combat-extrainit`).innerHTML = 0 +  + (this.equipment.armor?.bonus?.init || 0); 
-        document.querySelector(`#combat-def`).innerHTML = this.base.stats.dex + (this.equipment.offhand?.bonus?.def || 0) + (this.equipment.armor?.bonus?.def || 0); 
+        // Calculate DEF for tanks
+        const armorDefBonus = this.equipment.armor?.bonus?.def || 0;
+        const offHandBonus = this.equipment.offhand?.bonus?.def || 0;
+        document.querySelector(`#combat-def`).innerHTML = armorDefBonus >= 10 ? armorDefBonus + offHandBonus : this.base.stats.dex + armorDefBonus + offHandBonus;
+        // Calculate MDEF
         document.querySelector(`#combat-mdef`).innerHTML = this.base.stats.ins + (this.equipment.offhand?.bonus?.mdef || 0) + (this.equipment.armor?.bonus?.mdef || 0); 
     }
 

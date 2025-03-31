@@ -26,11 +26,27 @@ varik:
 
 onix:
   mainhand:
-    name: ""
+    name: Cuchillo de Cazador
+    type: melee
+    tags:
+      - Arma corta
+      - Una mano
+      - Cuerpo a cuerpo
+    stat1: DEX
+    stat2: INS
+    defense: DEF
+    attackbonus: 1
+    damagebonus: 4
+    damagetype: daño físico
+    description: >
+      Un cuchillo simple y ligero ideal para druidas.
   offhand:
     name: ""
   armor: 
-    name: ""
+    name: Túnica de Combate
+    bonus:
+      def: 1
+      mdef: 1
   accessory:
     name: ""
 
@@ -66,26 +82,30 @@ sylrith:
 
 camilla:
   mainhand:
-    name: Espada de Bronce
+    name: Lanza ligera
     type: melee
     tags:
-      - Espada Marcial
+      - Arma tipo lanza
       - Una mano
       - Cuerpo a cuerpo
     stat1: DEX
     stat2: MIG
     defense: DEF
-    attackbonus: 2
-    damagebonus: 6
+    attackbonus: 1
+    damagebonus: 8
     damagetype: daño físico
     description: >
-      Una espada hecha de bronce. Maestría Cuerpo a Cuerpo: +1 ataque ya aplicado.
+      Una lanza que no pesa mucho por lo que puede ser usada con una mano.
   offhand:
     name: Escudo Rúnico
     bonus:
       def: 2
       mdef: 2
   armor: 
-    name: ""
+    name: Brigandina
+    bonus:
+      def: 10
+      mdef: 0
+      init: -2
   accessory:
     name: ""
