@@ -18,6 +18,9 @@ varik:
     name: ""
   armor: 
     name: Túnica Tribal
+    bonus:
+      def: 1
+      mdef: 1
   accessory:
     name: ""
 
@@ -32,9 +35,9 @@ onix:
     name: ""
 
 sylrith:
-  mainhand: 
-    name: "Arco de mano"
-    type: range
+  mainhand:
+    name: Arco de mano
+    type: ranged
     tags:
       - Arma de arco
       - Una mano
@@ -48,16 +51,16 @@ sylrith:
     description: >
       Un arco simple y versátil, ideal para combates a distancia.
   offhand:
-    name: "Escudo Rúnico"
+    name: Escudo Rúnico
     bonus:
       def: 2
       mdef: 2
-  armor: 
-    name: "Camisa de seda"
+  armor:
+    name: Camisa de seda
     bonus:
       def: 0
       mdef: 2
-      initiative: -1
+      init: -1
   accessory:
     name: ""
 
