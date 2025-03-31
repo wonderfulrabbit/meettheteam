@@ -48,9 +48,16 @@ sylrith:
     description: >
       Un arco simple y versátil, ideal para combates a distancia.
   offhand:
-    name: ""
+    name: "Escudo Rúnico"
+    bonus:
+      def: 2
+      mdef: 2
   armor: 
-    name: ""
+    name: "Camisa de seda"
+    bonus:
+      def: 0
+      mdef: 2
+      initiative: -1
   accessory:
     name: ""
 
