@@ -1,9 +1,93 @@
 root:
   title: THE NATURALIST
-  paragraphs:
-    - text: >-
-        The Naturalist whispers to a field of flowers, inspiring them to bloom. 
-        They take a wolf's form, streaking across the steppe. 
-        With their hands to the sky, they summon a storm, bringing forth nature's wrath.
-    - text: >-
-        Play The Naturalist if you want to explore an intimate bond with the wild creatures and raw elemental forces of your world.
+
+  paths:
+    SHAPESHIFTER:
+      - animal form
+      - gills
+      - steelsprout
+      - petrify
+      - shapeshift
+
+    SUMMONER:
+      - thorn
+      - wild font
+      - evening star
+      - aurora
+      - echoes of creation
+
+    ELEMENTALIST:
+      - freeze
+      - burn
+      - shock
+      - fireball
+    
+    STORMCALLER:
+      - cloudcall
+      - vortex
+      - gale
+      - riverfury
+      - stormcall
+    
+    SPIRITCALLER:
+      - wild aspect
+      - prey sense
+      - nature's watch
+
+    ECOLOGIST:
+      - command nature 
+      - memories of stone 
+      - shift season
+
+    LEGENDARY ABILITIES:
+      - nature's wrath
+      - wild evolution
+      - to dust
+      - world wish
+
+coin:
+  title: THE MAGICIAN
+
+  paths:
+    MISDIRECTION:
+      - magic tricks 
+      - mesmerize 
+      - overthere 
+      - mirage 
+      - invisibility
+
+    MANNEQUINS:
+      - splitting image 
+      - phantom menace 
+      - illusory creature
+
+    CLAIRVOYANCE: 
+      - magic eye 
+      - whisper 
+      - message 
+      - interpret 
+      - insight
+
+    CONJURATION:
+      - little bird 
+      - helen's fantastic feast 
+      - monitor 
+      - shadow haven
+
+    MIND CONTROL:
+      - bamboozle 
+      - wren's delightful dream 
+      - perky profanation 
+      - fear
+
+    MAYHEM:
+      - scintillate 
+      - bedazzle 
+      - loosen 
+      - chaos ball
+    
+    LEGENDARY ABILITIES:
+      - control
+      - peerless pilot
+      - perfect gift
+      - invasion

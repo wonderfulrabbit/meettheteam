@@ -98,14 +98,24 @@ export class Character {
 
     #updateRoleHTML() {
         const roleTitle = document.querySelector("#section-class h4");
-        const roleDescription = document.querySelector("#section-class .description");
+        roleTitle.textContent = `${this.role.title} PATHS`;
 
-        roleTitle.textContent = this.role.title;
-        roleDescription.innerHTML = "";
-        this.role.paragraphs.forEach(p => {
-            const paragraph = document.createElement("p");
-            paragraph.textContent = p.text;
-            roleDescription.append(paragraph);
-        })
+        const container = document.getElementById("paths-container");
+        container.innerHTML = "";
+        
+        const entries = Object.entries(this.role.paths);
+        entries.forEach(([pathName, abilities], index) => {
+            const title = document.createElement("p");
+            title.innerHTML = `<strong>${pathName}</strong>`;
+            container.appendChild(title);
+
+            const list = document.createElement("p");
+            list.textContent = abilities.join(" — ");
+            container.appendChild(list);
+
+            if (index < entries.length - 1) {
+                container.appendChild(document.createElement("hr"));
+            }
+        });
     }
 }

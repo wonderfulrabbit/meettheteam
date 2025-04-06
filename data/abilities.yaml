@@ -98,3 +98,96 @@ root:
       role: NATURALIST
       path: ECOLOGIST
       root: 1
+
+coin:
+  - title: MAGIC TRICKS
+    paragraphs:
+      - number: 0
+        text: >-
+          You produce a tiny magical effect to surprise, delight, or confuse those around you. 
+          Choose any combination of these effects each time you use this ability:
+      - text: >-
+          LIGHT: You create a harmless display of light, like a flickering flame or a pattern of sparks. 
+          You can also snuff out or ignite small light sources like torches.
+      - text: >-
+          SOUND: You create a small, brief sound effect, like a wind chime, an audience clapping, or someone whispering.
+      - text: >-
+          SMELL: You conjure a smell of any kind, like a freshly baked pie or a cesspool.
+      - text: >-
+          TOUCH: You give one or more nearby creatures a gentle physical sensation, like someone tapping them on the shoulder,
+          a chill breeze, or the feeling of goosebumps.
+    footer:
+      role: MAGICIAN
+      path: MISDIRECTION
+      root: 1
+  - title: SPLITTING IMAGE
+    paragraphs:
+      - number: 1
+        text: >-
+          You vanish momentarily, reappearing with two illusory duplicates at your side.
+          Your duplicates travel alongside you and perfectly mimic all of your movements.
+      - text: >-
+          If a creature attempts to target you, the Guide must flip a coin. 
+          If it turns up "heads," you are targeted; on "tails" one of your duplicates is targeted. 
+          If one of your duplicates takes damage, it disappears.
+    footer:
+      role: MAGICIAN
+      path: MANNEQUINS
+      root: 1
+  - title: MAGIC EYE
+    paragraphs:
+      - number: 1
+        text: >-
+          You briefly gain the ability to see beyond physical reality. 
+          For the next hour, you are able to see the following:
+      - text: >-
+          MAGIC: A faint aura surrounds any person or object currently affected by magic.
+      - text: >-
+          ILLUSION: Any illusory creature or object slightly flickers, but you do not see its true form.
+    footer:
+      role: MAGICIAN
+      path: CLAIRVOYANCE
+      root: 1
+    
+  - title: LITTLE BIRD
+    paragraphs:
+      - number: 1
+        text: >-
+          You summon an illusory bird somewhere nearby that keeps watch over an area that it can see. 
+          It remains there until you dismiss it. You may only have one Little Bird at a time.
+      - text: >-
+          You share a telepathic link with the bird. 
+          It will message you when it witnesses something you specify, like a specific creature entering a room or a door opening. 
+          The bird will wake you up to tell you what it sees if you are sleeping.
+    footer:
+      role: MAGICIAN
+      path: CONJURATION
+      root: 1
+
+  - title: BAMBOOZLE
+    paragraphs:
+      - number: 1
+        text: >-
+          You make a nearby creature mildly confused about a specific subject until you leave the area. 
+          For example, you could make a merchant confused about the value of their goods, 
+          a guard confused about who is authorized to pass, or a dog confused about whether he is a good boy.
+          The confusion is lifted if you push the deception too far, like trying to trade a rock for a priceless item.
+    footer:
+      role: MAGICIAN
+      path: MIND CONTROL
+      root: 1
+
+  - title: SCINTILLATE
+    paragraphs:
+      - number: 0
+        text: >-
+          You extend your fingers outward, and a streaking bolt of sparks shoots toward a target you can see. 
+          Roll the die to see if it hits the target successfully.
+      - text: >-
+          You may make the bolt explode on contact with crackling energy, hitting the target for 2 HP. 
+          Or you can make the bolt a harmless firework that explodes in the air, creating a pattern 
+          of any shape and color.
+    footer:
+      role: MAGICIAN
+      path: MAYHEM
+      root: 1

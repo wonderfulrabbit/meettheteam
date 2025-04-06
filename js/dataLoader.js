@@ -24,8 +24,6 @@ export async function loadCharacters() {
             abilityList[name] || {},
             classList[name] || {}
         );
-  
-       
 
         return acc;
     }, {});

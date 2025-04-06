@@ -18,3 +18,20 @@ root:
     - A pair of Tiger Claws
     - A pair of gauntlets
     - Friendly Flute
+
+coin:
+  name: Coin
+  age: 7 weeks
+  height: 180 cm
+  role: magician
+  body: muscular lower body
+  face: blank face with only eyes
+  vibe: inhuman, machine-like stillness
+  clothes_a: baggy Egyptian pants, a short cloak
+  clothes_b: brass rings on my ankles and wrists
+  movement: precise motions
+  hometown:  a buried bank vault
+  reputation: cold logic and blackened ethics
+  ideal: pleasure
+  flaw: oblivious
+  dream: to become human

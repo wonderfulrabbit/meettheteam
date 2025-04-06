@@ -8,6 +8,7 @@ body > .container {
 	background-color: var(--pico-background-color);
 	max-width: 700px;
 	padding: 1rem;
+	padding-bottom: 0;
 	min-height: 100vh;
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
 				0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -145,4 +146,10 @@ ol li::before {
 #loading-overlay.loading-hidden {
 	opacity: 0;
 	pointer-events: none;
+}
+
+#section-class p {
+	font-size: 0.85em;
+	text-align: center;
+	margin-bottom: 0;
 }
