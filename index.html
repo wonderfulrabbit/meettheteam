@@ -7,210 +7,66 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	
-	<title>Fichas de Personaje</title>
+	<title>Meet the team</title>
 </head>
 <body>
 
 <div class="container">
 
 <nav class="container">
-    <li><h2>Character sheets</h2></li>
+    <li><h2>Meet the team</h2></li>
 	<li><select id="character-select"></select></li>
 </nav>
 
 <nav role="group">
-	<button id="btn-profile" class="active-btn"> <i class="fa-solid fa-user"></i> Profile</button>
-	<button id="btn-stats">	<i class="fa-solid fa-chart-simple"></i> Worksheet</button>
-	<button id="btn-build"> <i class="fa-solid fa-brain"></i> Abilities</button>
+	<button id="btn-profile" class="active-btn"> <i class="fa-solid fa-user"></i> </button>
+	<button id="btn-inventory">	<i class="fa-solid fa-chart-simple"></i> </button>
+	<button id="btn-abilities"> <i class="fa-solid fa-brain"></i> </button>
+	<button id="btn-class"> <i class="fa-solid fa-brain"></i> </button>
 </nav>
 
 <!-- Profile Section -->
 <section id="section-profile" class="section active">
-	<p>Hi, my name is <strong>Root Bear</strong>.</p>
-	<p>I'm <strong>___</strong> years old and stand <strong>___</strong> tall.</p>
+	<h4>CHARACTER PROFILE</h4>
+	<p>Hi, my name is <strong></strong>.</p>
+	<p>I'm <strong></strong> years old and stand <strong></strong> tall.</p>
 	<p>I'm the party's <strong>Naturalist</strong>.</p>
-	<p>When people see me, they first notice my <strong>barrel-sized belly</strong>, <strong>radiant smile</strong>, <strong>bursting energy</strong>.</p>
-	<p>I wear a <strong>bronze breastplate</strong>, <strong>obsidian bracers</strong>, and move with <strong>a heavy step</strong>.</p>
+	<p>When people see me, they first notice my <strong>barrel-sized belly</strong>, <strong>radiant smile</strong>, and <strong>bursting energy</strong>.</p>
+	<p>I wear <strong>bronze breastplate</strong>, <strong>obsidian bracers</strong>, and move with <strong>a heavy step</strong>.</p>
 	<p>I am from <strong>a place I can't name</strong>, where my people are known for <strong>a culture of secrecy</strong>.</p>
 	<p>I believe in <strong>Compassion</strong>, but my <strong>Reckless</strong> side can get in my way.</p>
 	<p>I dream of <strong>meeting my god</strong>.</p>
 </section>
 
-<!-- Stats Section -->
-<section id="section-stats" class="section">
-	<h2>Estadísticas de personaje</h2>
-	<div class="grid-4">
-		<div class="stat-item">
-			<span class="stat-name">Dexterity</span>
-			<span id="stat-dex" class="stat-value">0</span>
-			<span class="tag selectable">DEX</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Insight</span>
-			<span id="stat-ins" class="stat-value">0</span>
-			<span class="tag selectable">INS</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Might</span>
-			<span id="stat-mig" class="stat-value">0</span>
-			<span class="tag selectable">MIG</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Willpower</span>
-			<span id="stat-wlp" class="stat-value">0</span>
-			<span class="tag selectable">WLP</span>
-		</div>
-	</div>
-	
-	<div role="group" class="stat-use">
-		<input id="slot-1" readonly>
-		<input id="slot-2" readonly>
-		<button id="btn-roll">
-			<i class="fa-solid fa-dice"></i>
-		</button>
-	</div>
-
-	<div class="grid">
-		<div class="stat-item">
-			<span class="stat-name">Lento</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Aturdido</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Débil</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Asustado</span>
-		</div>
-	</div>
-
-	<div class="grid" style="margin-top: 19px;">
-		<div class="stat-item">
-			<span class="stat-name">Enfurecido</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Envevenado</span>
-		</div>
-	</div>
+<section id="section-inventory" class="section">
+	<h4>PERSONAL INVENTORY</h4>
+	<ol>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
 </section>
 
-<section id="section-survivality" class="section">
-	<h2>Estadísticas de combate</h2>
-	<div class="grid-3">
-		<div class="stat-item">
-			<span class="stat-name">Vida Máxima</span>
-			<span id="combat-hp" class="stat-value">0</span>
-			<span class="tag selectable">HP</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Mana Máximo</span>
-			<span id="combat-mp" class="stat-value">0</span>
-			<span class="tag selectable">MP</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Inventario Máximo</span>
-			<span id="combat-ip" class="stat-value">0</span>
-			<span class="tag selectable">IP</span>
-		</div>
-	</div>
-	<div class="grid-3">
-		<div class="stat-item">
-			<span class="stat-name">Iniciativa Extra</span>
-			<span id="combat-extrainit" class="stat-value">6</span>
-			<span class="tag selectable">EXTRAINIT</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Defensa Física</span>
-			<span id="combat-def" class="stat-value">0</span>
-			<span class="tag selectable">DEF</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-name">Defensa Mágica</span>
-			<span id="combat-mdef" class="stat-value">0</span>
-			<span class="tag selectable">MDEF</span>
-		</div>
-	</div>
-	
+
+<section id="section-abilities" class="section">
+	<h4>ABILITIES</h4>
+	<div>Ability List</div>
 </section>
 
-<section id="section-assets" class="section">
-	<h2>Equipamiento</h2>
-
-	<div class="grid">
-		<div class="data-container">
-			<div for="equip-mainhand" class="floating-label">Mano Principal</div>
-			<div id="equip-mainhand" class="data"></div>
-		</div>
-		<div class="data-container">
-			<div for="equip-armor" class="floating-label">Armadura</div>
-			<div id="equip-armor" class="data"></div>
-		</div>
-	</div>
-
-	<div class="grid">
-		<div class="data-container">
-			<div for="equip-offhand" class="floating-label">Mano Secundaria</div>
-			<div id="equip-offhand" class="data"></div>
-		</div>
-		<div class="data-container">
-			<div for="equip-accessory" class="floating-label">Accesorio</div>
-			<div id="equip-accessory" class="data"></div>
-		</div>
-	</div>
-
-	<h3>Lazos</h3>
-
-	<div class="grid">
-		<input type="text" id="bond-target-1" readonly>
-		<input type="text" id="bond-type-1" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-2" readonly>
-		<input type="text" id="bond-type-2" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-3" readonly>
-		<input type="text" id="bond-type-3" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-4" readonly>
-		<input type="text" id="bond-type-4" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-5" readonly>
-		<input type="text" id="bond-type-5" readonly>
-	</div>
-	<div class="grid">
-		<input type="text" id="bond-target-6" readonly>
-		<input type="text" id="bond-type-6"  readonly>
-	</div>
+<section id="section-class" class="section">
+	<h4>THE ROLE</h4>
+	<div class="description"></div>
 </section>
 
-<section id="section-build" class="section">
-	<h2>Clases</h2>
-	<div class="grid">
-		<div class="data-container">
-			<div for="build-class-1" class="floating-label">Clase 1</div>
-			<div id="build-class-1" class="data"></div>
-		</div>
-		<div class="data-container">
-			<div for="build-class-2" class="floating-label">Clase 2</div>
-			<div id="build-class-2" class="data"></div>
-		</div>
-	</div>
-
-	<h3>Habilidades</h3>
-	<div id="build-container"></div>
-</section>
-
-<section id="section-actives" class="section">
-	<h2>Acciones</h2>
-
-	<div id="equip-cards"></div>
-	<div id="spell-cards"></div>
-</section>
-	
 </div>
 
 </div>

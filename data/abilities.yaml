@@ -1,238 +1,100 @@
-varik:
-  class1:
-    name: Hechicero
-    level: 4
-    color: rgb(50, 50, 150)
-    benefits:
-      - Incrementa tus Puntos de Mana en 5.
-      - Puedes usar Rituales de la disciplina Ritualismo
-    bonus:
-      hp: 0
-      mp: 5
-  class2: 
-    name: Erudito
-    level: 1
-    color: rgb(40, 60, 60)
-    benefits:
-      - Incrementa tus Puntos de Mana en 5.
-    bonus:
-      hp: 0
-      mp: 5
-  list:
-    elementalmagic:
-      name: Magia Elemental
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Hechicero
-      description: >
-        Aprende un hechizo de Hechicero por cada ⭐.
-        Los hechizos ofensivos del Hechicero usan INS + WLP para la Prueba de Ataque.
-    magicalartillery:
-      name: Artillería Mágica
-      type: ability
-      level: 3
-      tags:
-        - Habilidad
-        - Hechicero
-      description: >
-        Cuando lanzas un hechizo ofensivo, si tienes un Arma Arcana equipada, obtienes un bono a tu Prueba de Ataque igual a 2 x ⭐.
-    quickassessment:
-      name: Chispa de Sabiduría
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Erudito
-      description: >
-        Cuando obtengas un 13 o más en una tirada realizada para Investigar a una criatura,
-        objeto o ubicación, puedes hacerle al Maestro de Juego hasta ⭐ preguntas acerca del
-        objetivo de tu investigación. Puedes formular estas preguntas de inmediato o reservarlas para más tarde; 
-        cada vez que hagas una de estas preguntas,
-        el Maestro de Juego responderá con total veracidad y tú describirás el proceso deductivo de tu personaje.
-        Esta Habilidad solo se puede utilizar una vez sobre la misma criatura, objeto o ubicación.
-        
-onix:
-  class1:
-    name: Druida
-    level: 2
-    color: rgb(85, 130, 70)
-    benefits:
-      - Incrementa tus Puntos de Mana en 5.
-      - Puedes usar Rituales de la disciplina Ritualismo
-    bonus:
-      hp: 0
-      mp: 5
-  class2: 
-    name: Curador
-    level: 3
-    color: rgb(60, 100, 180)
-    benefits:
-      - Incrementa tus Puntos de Mana en 5.
-      - Puedes usar Rituales de la disciplina Ritualismo
-    bonus:
-      hp: 0
-      mp: 5
-  list: 
-    consume:
-      name: Devorar
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Druida
-      description: >
-        Después de infligir daño a una o más criaturas con un hechizo, si tienes un Arma Arcana, 
-        Daga o Maza Equipada, recuperas (2 x ⭐) Puntos de Mana.
-    spellmimic:
-      name: Mimetismo
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Druida
-      description: >
-        Cuando veas a una Bestia, Monstruo o Planta lanzar un hechizo,
-        puedes elegir de inmediato aprender ese hechizo. Si lo haces, 
-        registra la especie de la criatura de la cual lo aprendiste.
-        Cuando adquieras esta habilidad por primera vez, elige INS + WLP o MIG + WLP.
-        Puedes tener hasta (⭐ + 2) hechizos memorizados de esta manera. Si deseas memorizar un nuevo
-        hechizo deberás remplazarlo uno de tus hechizos anteriores.
-    vismagus:
-      name: Vismago
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Curador
-      description: >
-        Cuando lanzas un hechizo, si no tienes suficientes Puntos de Mana,
-        puedes optar por gastar el doble de Puntos de Vida en su lugar. No
-        puedes usar esta habilidad si ello te reduce a 0 Puntos de Vida. Si un hechizo lanzado de esta manera 
-        causara que recuperes Puntos de Vida, no recuperas ninguno.
-    spiritualmagic:
-      name: Magia Espiritual
-      type: ability
-      level: 2
-      tags:
-        - Habilidad
-        - Curador
-      description: >
-        Aprende un hechizo de Curador por cada ⭐. Los hechizos ofensivos utilizan INS + WLP para la prueba de ataque.
+root:
+  - title: ANIMAL FORM
+    paragraphs:
+      - number: 2
+        text: >-
+          You take the form of a wild animal, adopting its shape, senses, and range of motion.
+          You may choose any creature that is no smaller than a mouse and no larger than a horse.
+          Everything you carry becomes part of your animal form.
+      - text: >-
+          While in animal form, you have 6 HP. You may make basic attacks that hit for 2 HP.
+          You can't cast spells, use items, or speak languages while transformed.
+      - text: >-
+          You can return to your normal form at any time. When transforming back, you regain the hit points
+          you had before you transformed. Falling to 0 hit points while transformed instantly returns you to your normal form.
+    footer:
+      role: NATURALIST
+      path: SHAPESHIFTER
+      root: 1
 
-sylrith:
-  class1:
-    name: Arquero
-    level: 2
-    color: rgb(36, 89, 81)
-    benefits:
-      - Incrementa tus Puntos de Vida en 5.
-      - Puedes usar Armas de Rango Marciales y Escudos Marciales
-    bonus:
-      hp: 5
-      mp: 0
-  class2:
-    name: Invocador
-    level: 2
-    color: rgb(141, 47, 105)
-    benefits:
-      - Incrementa tus Puntos de Mana en 5.
-    bonus:
-      hp: 0
-      mp: 5
-  list:
-    rangedweaponmastery:
-      name: Maestría con Armas a Distancia
-      type: ability
-      level: 4
-      tags:
-        - Habilidad
-        - Arquero
-      description: >
-        Obtienes un bono de ⭐ a todas las tiradas de Ataque con Armas a Distancia.
-    bindandsummon:
-      name: Vincular y Convocar
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Invocador
-      description: >
-        Puedes vincularte con un Arcano para convocarla más tarde. El GM te comunicará 
-        los detalles de cada proceso de vinculación cuando te encuentres 
-        por primera vez con el Arcano en cuestión.
-        Puedes utilizar una acción y gastar 40 Puntos de Mana para convocar un Arcano 
-        con el que te hayas vinculado: 
-        los detalles de este proceso se explican en la siguiente página.
-        Si adquieres esta habilidad al crear a tu personaje, comienzas la partida con un Arcanum de tu elección 
-        ya vinculado a ti, seleccionado de la lista en las páginas siguientes. Aparte de eso, solo puedes obtener 
-        nuevos Arcana mediante la exploración y el avance de la historia.
+  - title: THORN
+    tag: ROLL THE DIE
+    paragraphs:
+      - number: 0
+        text: >-
+          You open your palm, conjuring a poisonous thorn that you shoot in a straight line toward a nearby target creature or object.
+          The thorn hits for 2 HP.
+      - label: "20:"
+        text: >-
+          The thorn's poison is amplified. If you hit an organic creature, its skin becomes swollen,
+          it cannot see beyond its reach, and it can't speak or cast spells until the end of its next turn.
+    footer:
+      role: NATURALIST
+      path: SUMMONER
+      root: 1
 
+  - title: FREEZE
+    paragraphs:
+      - number: 0
+        text: >-
+          You blow cool air, creating freezing winds that swirl around a nearby creature or object.
+          Affected creatures feel a deep chill in their bones and are hit for 1 HP.
+          You can use the spell to snuff out small fires.
+      - number: 2
+        text: >-
+          You freeze a nearby commoner, minion, or object, encasing it in ice until you leave the scene.
+          If you freeze a creature, it cannot move or act. The ice shatters, and the creature is freed if it takes any additional damage.
+    footer:
+      role: NATURALIST
+      path: ELEMENTALIST
+      root: 1
   
-camilla:
-  class1:
-    name: Guardian
-    level: 3
-    color: rgb(100, 30, 100)
-    benefits:
-      - Incrementa tus Puntos de Vida en 5.
-      - Puedes usar Armaduras Marciales y Escudos Marciales
-    bonus:
-      hp: 5
-      mp: 0
-  class2:
-    name: Espadachin
-    level: 2
-    color: rgb(170, 70, 50)
-    benefits:
-      - Incrementa tus Puntos de Vida en 5.
-      - Puedes usar Armas de Cerca Marciales y Escudos Marciales
-    bonus:
-      hp: 5
-      mp: 0
-  list:
-    defensiveMastery:
-      name: Maestría Defensiva
-      type: ability
-      level: 2
-      tags:
-        - Habilidad
-        - Guardian
-      description: >
-        Mientras tengas equipado un escudo o una armadura marcial, todo el daño que recibas
-        se reduce en ⭐ (aplicado antes de las Afinidades de daño).
-    protect:
-      name: Protección
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Guardian
-      description: >
-        Cuando otra criatura se vea amenazada por un ataque, hechizo u otro peligro, puedes tomar su lugar
-        (todas las tiradas involucradas en el peligro se realizarán contra ti; puedes declarar el uso de esta 
-        Habilidad antes o después de que se efectúen las tiradas). Si el peligro ya te ha afectado, 
-        te afecta dos veces.
-        Si usas esta Habilidad durante un conflicto, no podrás volver a utilizarla hasta el inicio de tu siguiente turno.
-    counterattack:
-      name: Contraataque
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Espadachin
-      description: >
-        Después de que un enemigo te acierte o falle con un ataque cuerpo a cuerpo, si el resultado de su tirada 
-        de ataque fue un número par, puedes realizar un ataque gratuito contra ese enemigo (después de que se haya 
-        resuelto completamente su ataque). Este ataque debe ser cuerpo a cuerpo y tener a ese enemigo 
-        como único objetivo; trata tu Tirada Alta (HR) como 0 al calcular el daño causado por este ataque.
-    meleeweaponmastery:
-      name: Maestría Cuerpo a Cuerpo
-      type: ability
-      level: 1
-      tags:
-        - Habilidad
-        - Espadachin
-      description: >
-        Obtienes un bono igual a ⭐ a todas las tiradas de ataque con armas cuerpo a cuerpo.
+  - title: CLOUDCALL
+    paragraphs:
+      - number: 1
+        text: >-
+          You swirl your hands in the air, producing a thick fog centered on you. 
+          The fog rolls out rapidly, spilling around corners and down slopes. 
+          Within a few seconds, you blanket everything nearby in fog. 
+          Creatures inside the fog cannot see beyond their reach, preventing them from making ranged attacks. 
+          The fog disperses after you leave the area, or if the area is hit by strong winds.
+    footer:
+      role: NATURALIST
+      path: STORMCALLER
+      root: 1
+
+  - title: WILD ASPECTS
+    paragraphs:
+      - number: 1
+        text: >-
+          EAGLE: You gain eagle-eye vision for the next minute. 
+          You can see anything in your line of sight clearly, even if it is far away, and you can detect faraway movement that would be imperceptible to a normal person.
+      - number: 2
+        text: >-
+          CAT: You purr softly under your breath, imbuing up to 6 nearby creatures with the spirit of the cat. 
+          For the next hour, affected creatures gain the ability to see things nearby in complete darkness as if they were in a dimly lit room. 
+          The effect cannot pierce magical darkness. Affected creatures may occasionally feel the urge to stop what they are doing and clean themselves.
+      - number: 2
+        text: >-
+          WOLF: You howl, imbuing up to 6 nearby creatures with haste. 
+          For the next hour, creatures affected by the spell can outrun any other creatures while traveling by foot.
+    footer:
+      role: NATURALIST
+      path: SPIRITCALLER
+      root: 1
+
+  - title: COMMAND NATURE
+    paragraphs:
+      - number: 0
+        text: >-
+          You whisper a rhyming couplet to the living plants around you. 
+          You can write your own or borrow one from another author. 
+          Use one that plants might appreciate, like "Hear my voice ring, and welcome the spring."
+      - text: >-
+          Your brief poem entreats the plants to produce a harmless effect by moving or growing slightly. 
+          The things you want to manipulate must be within range. 
+          You may make trees rustle, cause leaves to fall, get plants to bloom, vines to expand, and seeds to sprout.
+    footer:
+      role: NATURALIST
+      path: ECOLOGIST
+      root: 1

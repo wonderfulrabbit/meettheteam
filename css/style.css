@@ -6,7 +6,7 @@ body {
 
 body > .container {
 	background-color: var(--pico-background-color);
-	max-width: 750px;
+	max-width: 700px;
 	padding: 1rem;
 	min-height: 100vh;
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
@@ -17,17 +17,111 @@ header {
 	text-align: center;
 }
 
+h4 {
+	text-align: center;
+	color: black;
+}
+
 #character-select {
-	max-width: 250px;
+	max-width: 280px;
 }
 
 .section {
 	display: none;
 	border-radius: 8px;
-	padding: 1.5rem;
+	padding: 1.3rem;
 	border: 1px solid var(--pico-muted-color);
 }
 
 .section.active {
 	display: block;
+}
+
+ol{
+	list-style: none;
+	padding-left: 0;
+	counter-reset: item;
+}
+
+ol li {
+	counter-increment: item;
+	position: relative;
+	padding-left: 2.2em;
+	margin: 0.8em 0;
+	min-height: 1.6em;
+}
+
+ol li::before {
+	content: counter(item);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1.6em;
+	height: 1.6em;
+	background-color: #222;
+	color: white;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 1.6em;
+	font-weight: 600;
+}
+
+/* Keep all previous card styles */
+.card {
+	border: 2px solid #3a3a89;
+	border-radius: 12px;
+	padding: 1em;
+	background: white;
+	margin-bottom: 1em;
+}
+
+.card-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1em;
+	gap: 0.5em;
+	color: black;
+	font-weight: bold;
+}
+
+.card-title .line {
+	flex-grow: 1;
+	height: 2px;
+	background: #3a3a89;
+}
+
+.card-tag {
+	border: 2px solid black;
+	font-size: 0.75em;
+	font-weight: bold;
+	display: inline-block;
+	padding: 2px 6px;
+	margin-bottom: 1em;
+}
+
+.card p {
+	text-align: justify;
+	position: relative;
+}
+
+.card-number {
+	display: inline-block;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 3px 20px 3px 10px;
+	position: relative;
+	clip-path: polygon(0 0, 65% 0, 100% 50%, 65% 100%, 0 100%);
+}
+
+.card-footer {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.9em;
+	margin-top: 1em;
+	border-top: 2px solid #3a3a89;
+	padding-top: 0.5em;
+	text-transform: uppercase;
 }

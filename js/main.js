@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Initialize elements
     initializeNav();
-    // initializeDropdown();
+    initializeDropdown();
 });

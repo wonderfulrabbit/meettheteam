@@ -3,140 +3,109 @@ import { Card } from "./card.js";
 import { darkenRGB } from "./utils.js";
 
 export class Character {
-    constructor(character, equipment, abilities, attacks) {
-        this.base = character;
-        this.equipment = equipment;
+    constructor(character, inventory, abilities, role) {
+        this.profile = character;
+        this.inventory = inventory;
         this.abilities = abilities;
-        this.attacks = attacks;
+        this.role = role;
     }
 
     updateAll(){
-        this.#updateBaseHTML();
-        this.#updateStatsHTML();
-        this.#updateCombatStatsHTML();
-        this.#updateEquipmentHTML();
+        this.#updateProfileHTML();
+        this.#updateInventoryHTML();
         this.#updateAbilitiesHTML();
-        this.#updateAttacksHTML();
+        this.#updateRoleHTML();
     }
 
-    #updateBaseHTML() {
-        document.querySelector('#character-name').innerHTML = this.base.name;    
-        document.querySelector('#character-level').innerHTML = this.base.level;
-        document.querySelector('#character-player').innerHTML = this.base.player;
-        document.querySelector('#trait-identity').innerHTML = this.base.traits.identity;
-        document.querySelector('#trait-origin').innerHTML = this.base.traits.origin;
-        document.querySelector('#trait-theme').innerHTML = this.base.traits.theme;
+    #updateProfileHTML() {
+        const elements = document.querySelectorAll("#section-profile strong");
+        const values = [
+            this.profile.name,
+            this.profile.age,
+            this.profile.height,
+            this.profile.role,
+            this.profile.body,
+            this.profile.face,
+            this.profile.vibe,
+            this.profile.clothes_a,
+            this.profile.clothes_b,
+            this.profile.movement,
+            this.profile.hometown,
+            this.profile.reputation,
+            this.profile.ideal,
+            this.profile.flaw,
+            this.profile.dream
+        ];
+    
+        elements.forEach((el, i) => el.textContent = values[i]);
     }
-
-    #updateStatsHTML() {
-        Object.entries(this.base.stats).forEach(([id, value]) => {
-            document.querySelector(`#stat-${id}`).innerHTML = value;
-
-            const tag = document.querySelector(`#stat-${id} + .tag.selectable`);
-            const newTag = tag.cloneNode(true);
-            tag.replaceWith(newTag);
-
-            newTag.addEventListener('click', () => addStatToSlot(id, value));
+    
+    #updateInventoryHTML() {
+        const elements = document.querySelectorAll("#section-inventory li");
+    
+        elements.forEach((el, i) => {
+            el.textContent = this.inventory[i] ?? ""; // Set to item if exists, else empty
         });
-    }
-
-    #updateCombatStatsHTML() {
-        document.querySelector('#combat-hp').innerHTML = this.base.level + 5 * this.base.stats.mig + this.abilities.class1.bonus.hp + this.abilities.class2.bonus.hp;
-        document.querySelector(`#combat-mp`).innerHTML = this.base.level + 5 * this.base.stats.wlp + this.abilities.class1.bonus.mp + this.abilities.class2.bonus.mp;
-        document.querySelector(`#combat-ip`).innerHTML = 6; 
-        document.querySelector(`#combat-extrainit`).innerHTML = 0 +  + (this.equipment.armor?.bonus?.init || 0); 
-        // Calculate DEF for tanks
-        const armorDefBonus = this.equipment.armor?.bonus?.def || 0;
-        const offHandBonus = this.equipment.offhand?.bonus?.def || 0;
-        document.querySelector(`#combat-def`).innerHTML = armorDefBonus >= 10 ? armorDefBonus + offHandBonus : this.base.stats.dex + armorDefBonus + offHandBonus;
-        // Calculate MDEF
-        document.querySelector(`#combat-mdef`).innerHTML = this.base.stats.ins + (this.equipment.offhand?.bonus?.mdef || 0) + (this.equipment.armor?.bonus?.mdef || 0); 
-    }
-
-    #updateEquipmentHTML() {
-        document.querySelector('#equip-mainhand').innerHTML = this.equipment.mainhand.name;
-        document.querySelector(`#equip-offhand`).innerHTML = this.equipment.offhand.name;
-        document.querySelector(`#equip-armor`).innerHTML = this.equipment.armor.name;
-        document.querySelector(`#equip-accessory`).innerHTML = this.equipment.accessory.name;
     }
 
     #updateAbilitiesHTML() {
-        // Cache
-        const class1El = document.querySelector('#build-class-1');
-        const class2El = document.querySelector('#build-class-2');
-        const container = document.querySelector('#build-container');
-        const class1 = this.abilities.class1;
-        const class2 = this.abilities.class2;
+        const container = document.querySelector("#section-abilities div");
+        container.innerHTML="";
 
-        // Update header elements with class names and levels
-        class1El.innerHTML = `${class1.name} (${class1.level}⭐)`;
-        class2El.innerHTML = `${class2.name} (${class2.level}⭐)`;
+        this.abilities.forEach(card => {
+            const div = document.createElement("div");
+            div.className = "card";
 
-        // Set background colors with !important override
-        class1El.style.setProperty('background-color', class1.color, 'important');
-        class2El.style.setProperty('background-color', class2.color, 'important');
+            // Title
+            div.innerHTML += `
+            <div class="card-title">
+                <span class="line"></span>
+                <span>${card.title}</span>
+                <span class="line"></span>
+            </div>`;
 
-        // If there are no abilities, exit
-        if (!this.abilities.list) return;
-
-        container.innerHTML = "";
-
-        Object.values(this.abilities.list).forEach(ability => {
-            const card = new Card(`${ability.name} (${ability.level}⭐)`, ability, this.base.stats);
-            const cardEl = card.Show;
-        
-            // Update background colors based on ability tags
-            if (ability.tags.includes(class1.name)) {
-                cardEl.style.setProperty('background-color', class1.color, 'important');
-                // Find all tag elements within the .tags container and darken their background
-                const tagContainer = cardEl.querySelector('.tags');
-                if (tagContainer) {
-                    Array.from(tagContainer.children).forEach(tag => {
-                        tag.style.setProperty('background-color', darkenRGB(class1.color), 'important');
-                    });
-                }
-            } else if (ability.tags.includes(class2.name)) {
-                cardEl.style.setProperty('background-color', class2.color, 'important');
-                const tagContainer = cardEl.querySelector('.tags');
-                if (tagContainer) {
-                    Array.from(tagContainer.children).forEach(tag => {
-                        tag.style.setProperty('background-color', darkenRGB(class2.color), 'important');
-                    });
-                }
+            // Tag
+            if (card.tag) {
+                div.innerHTML += `<div class="card-tag">${card.tag}</div>`;
             }
-        
-            container.appendChild(cardEl);
+
+            // Paragraphs
+            card.paragraphs.forEach(p => {
+            const para = document.createElement("p");
+            para.className = "card-body";
+
+            if (p.number !== undefined) {
+                para.innerHTML = `<span class="card-number">${p.number}</span> ${p.text}`;
+            } else if (p.label) {
+                para.innerHTML = `<strong>${p.label}</strong> ${p.text}`;
+            } else {
+                para.innerHTML = p.text;
+            }
+
+            div.appendChild(para);
+            });
+
+            // Footer
+            div.innerHTML += `
+            <div class="card-footer">
+                <span>${card.footer.role}</span>
+                <span>${card.footer.path} — <strong>${card.footer.root}</strong></span>
+            </div>`;
+
+            container.appendChild(div);
         });
     }
 
-    #updateAttacksHTML() {
-        // Obtener el contenedor de equipamiento
-        const equipCards = document.getElementById('equip-cards');
-        const stats = this.base.stats;
-        const { mainhand, offhand } = this.equipment;
+    #updateRoleHTML() {
+        const roleTitle = document.querySelector("#section-class h4");
+        const roleDescription = document.querySelector("#section-class .description");
 
-        equipCards.innerHTML = "";
-    
-        // Si el arma principal tiene propiedad de defensa, se crea su tarjeta
-        if (mainhand?.defense) {
-            const card = new Card(mainhand.name, mainhand, stats);
-            equipCards.appendChild(card.Show);
-        }
-    
-        // Si el arma secundaria tiene propiedad de defensa, se crea su tarjeta
-        if (offhand?.defense) {
-            const card = new Card(offhand.name, offhand, stats);
-            equipCards.appendChild(card.Show);
-        }
-    
-        // Obtener el contenedor de hechizos y agregar cada tarjeta de hechizo
-        const spellCards = document.getElementById('spell-cards');
-
-        spellCards.innerHTML = "";
-
-        Object.values(this.attacks).forEach(attack => {
-            const card = new Card(attack.name, attack, stats);
-            spellCards.appendChild(card.Show);
-        });
+        roleTitle.textContent = this.role.title;
+        roleDescription.innerHTML = "";
+        this.role.paragraphs.forEach(p => {
+            const paragraph = document.createElement("p");
+            paragraph.textContent = p.text;
+            roleDescription.append(paragraph);
+        })
     }
 }

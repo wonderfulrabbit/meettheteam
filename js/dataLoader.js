@@ -15,14 +15,14 @@ export async function loadCharacterNames() {
 }
 
 export async function loadCharacters() {
-    const { characterList, equipmentList, abilityList, attackList } = await loadLists();
+    const { characterList, inventoryList, abilityList, classList } = await loadLists();
 
     characters = Object.keys(characterList).reduce((acc, name) => {
         acc[name] = new Character(
             characterList[name],
-            equipmentList[name] || {}, 
+            inventoryList[name] || {}, 
             abilityList[name] || {},
-            attackList[name] || {}
+            classList[name] || {}
         );
         return acc;
     }, {});
@@ -30,11 +30,11 @@ export async function loadCharacters() {
 
 async function loadLists() {
     const characterList = await loadYAML("../data/characters.yaml");
-    const equipmentList = await loadYAML("../data/equipment.yaml");
+    const inventoryList = await loadYAML("../data/inventory.yaml");
     const abilityList = await loadYAML("../data/abilities.yaml");
-    const attackList = await loadYAML("../data/attacks.yaml");
+    const classList = await loadYAML("../data/class.yaml");
 
-    return { characterList, equipmentList, abilityList, attackList };
+    return { characterList, inventoryList, abilityList, classList };
 }
 
 async function loadYAML(location) {

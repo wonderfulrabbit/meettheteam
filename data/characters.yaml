@@ -1,35 +1,39 @@
 root:
-    name: Root Bear
-    age: ""
-    height: ""
-    role: Naturalist
-    body: barrel-sized belly
-    face: radiant smile
-    vibe: bursting energy
-    clothes: 
-        - a bronze breastplate
-        - obsidian bracers
-    movement: a heavy step
-    hometown: A place I can't name
-    reputation: A culture of Secrecy
-    ideal: Compassion
-    flaw: Reckless
-    dream: Meeting my God
+  name: Rootbear
+  age: "?"
+  height: "?"
+  role: naturalist
+  body: barrel-sized belly
+  face: radiant smile
+  vibe: bursting energy
+  clothes_a: a bronze breastplate
+  clothes_b: obsidian bracers
+  movement: a heavy step
+  hometown: a place I can't name
+  reputation: a culture of secrecy
+  ideal: compassion
+  flaw: reckless
+  dream: meeting my God
+  inventory:
+    - A pair of Tiger Claws
+    - A pair of gauntlets
+    - Friendly Flute
+
 
 rat:
-    name: Rat Bear
-    age: ""
-    height: ""
-    role: Rat
-    body: barrel-sized belly
-    face: radiant smile
-    vibe: bursting energy
-    clothes: 
-        - a bronze rat
-        - obsidian bracers
-    movement: a heavy step
-    hometown: A place I can't name
-    reputation: A culture of Secrecy
-    ideal: Compassion
-    flaw: Reckless
-    dream: Meeting my God
+  name: Rat Bear
+  age: ""
+  height: ""
+  role: Rat
+  body: barrel-sized belly
+  face: radiant smile
+  vibe: bursting energy
+  clothes: 
+    - a bronze rat
+    - obsidian bracers
+  movement: a heavy step
+  hometown: A place I can't name
+  reputation: A culture of Secrecy
+  ideal: Compassion
+  flaw: Reckless
+  dream: Meeting my God
