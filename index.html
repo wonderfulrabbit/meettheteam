@@ -1,9 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -14,62 +13,27 @@
 
 <div class="container">
 
-<header class="container">
-    <h1>Fichas de Personaje</h1>
-	<select id="character-select"></select>
-</header>
-
-<nav role="group">
-	<button id="btn-basic" class="active-btn"> <i class="fa-solid fa-user"></i> </button>
-	<button id="btn-stats">	<i class="fa-solid fa-chart-simple"></i> </button>
-	<button id="btn-survivality"> <i class="fa-solid fa-shield-halved"></i> </button>
-	<button id="btn-assets"> <i class="fa-solid fa-sack-dollar"></i>	</button>
-	<button id="btn-build"> <i class="fa-solid fa-brain"></i> </button>
-	<button id="btn-actives"> <i class="fa-solid fa-hand-fist"></i> </button>
+<nav class="container">
+    <li><h2>Character sheets</h2></li>
+	<li><select id="character-select"></select></li>
 </nav>
 
-<!-- Basic Section -->
-<section id="section-basic" class="section active">
+<nav role="group">
+	<button id="btn-profile" class="active-btn"> <i class="fa-solid fa-user"></i> Profile</button>
+	<button id="btn-stats">	<i class="fa-solid fa-chart-simple"></i> Worksheet</button>
+	<button id="btn-build"> <i class="fa-solid fa-brain"></i> Abilities</button>
+</nav>
 
-<h2>Información básica</h2>
-
-<div class="grid">
-	<div class="data-container">
-		<div for="character-name" class="floating-label">Nombre</div>
-		<div id="character-name" class="data"></div>
-	</div>
-</div>
-<div class="grid">
-	<div class="data-container">
-		<div for="character-level" class="floating-label">Nivel</div>
-		<div id="character-level" class="data"></div>
-	</div>
-    <div class="data-container">
-		<div for="character-player" class="floating-label">Jugador</div>
-		<div id="character-player" class="data"></div>
-	</div>
-</div>
-
-<h3>Características</h3>
-
-<div class="grid">
-	<div class="data-container">
-		<div for="trait-identity" class="floating-label">Identidad</div>
-		<div id="trait-identity" class="data"></div>
-	</div>
-</div>
-<div>
-	<div class="data-container">
-		<div for="trait-origin" class="floating-label">Origen</div>
-		<div id="trait-origin" class="data"></div>
-	</div>
-</div>
-<div>
-	<div class="data-container">
-		<div for="trait-theme" class="floating-label">Tema</div>
-		<div id="trait-theme" class="data"></div>
-	</div>
-</div>
+<!-- Profile Section -->
+<section id="section-profile" class="section active">
+	<p>Hi, my name is <strong>Root Bear</strong>.</p>
+	<p>I'm <strong>___</strong> years old and stand <strong>___</strong> tall.</p>
+	<p>I'm the party's <strong>Naturalist</strong>.</p>
+	<p>When people see me, they first notice my <strong>barrel-sized belly</strong>, <strong>radiant smile</strong>, <strong>bursting energy</strong>.</p>
+	<p>I wear a <strong>bronze breastplate</strong>, <strong>obsidian bracers</strong>, and move with <strong>a heavy step</strong>.</p>
+	<p>I am from <strong>a place I can't name</strong>, where my people are known for <strong>a culture of secrecy</strong>.</p>
+	<p>I believe in <strong>Compassion</strong>, but my <strong>Reckless</strong> side can get in my way.</p>
+	<p>I dream of <strong>meeting my god</strong>.</p>
 </section>
 
 <!-- Stats Section -->

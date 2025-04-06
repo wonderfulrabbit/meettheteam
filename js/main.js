@@ -8,6 +8,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadCharacters();
 
     // Initialize elements
-    initializeDropdown();
     initializeNav();
+    // initializeDropdown();
 });

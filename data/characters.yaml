@@ -1,52 +1,35 @@
-varik:
-    name: Varik Ashford 
-    level: 5
-    player: Kurosagi (Kuro)
-    traits:
-        identity: Chamán de los cuatro fuegos
-        origin: Ciudad maldita de Kazgrin (Goblins)
-        theme: Deber "Es mi destino romper la maldición de Kazgrin"
-    stats:
-        dex: 6
-        ins: 10
-        mig: 6
-        wlp: 10
-onix:
-    name: Onix Silvaférrea
-    player: Siriat
-    level: 5
-    traits:
-        identity: Brujo de la flora salvaje
-        origin: Yur'Zhan, el corazón salvaje (Jungla)
-        theme: Misericordia "Brindaré mi ayuda a quien la necesite, siempre que no altere el equilibrio del ciclo natural."
-    stats:
-        dex: 8
-        ins: 10
-        mig: 6
-        wlp: 8
-sylrith:
-    name: Sylrith
-    player: Pokerface
-    level: 5
-    traits:
-        identity: "?"
-        origin: Nox Flora, el bosque encantado
-        theme: Culpa "No importa cuanto tiempo me tome... Encontraré la manera de limpiar mi pecado."
-    stats:
-        dex: 10
-        ins: 8
-        mig: 6
-        wlp: 8
-camilla:
-    name: Camilla
-    level: 5
-    player: Yoman
-    traits:
-        identity: Aspirante a aventurera
-        origin: Aldea Arkera, villa rural dedicada a la pesca y caza
-        theme: "?"
-    stats:
-        dex: 8
-        ins: 6
-        mig: 10
-        wlp: 8
+root:
+    name: Root Bear
+    age: ""
+    height: ""
+    role: Naturalist
+    body: barrel-sized belly
+    face: radiant smile
+    vibe: bursting energy
+    clothes: 
+        - a bronze breastplate
+        - obsidian bracers
+    movement: a heavy step
+    hometown: A place I can't name
+    reputation: A culture of Secrecy
+    ideal: Compassion
+    flaw: Reckless
+    dream: Meeting my God
+
+rat:
+    name: Rat Bear
+    age: ""
+    height: ""
+    role: Rat
+    body: barrel-sized belly
+    face: radiant smile
+    vibe: bursting energy
+    clothes: 
+        - a bronze rat
+        - obsidian bracers
+    movement: a heavy step
+    hometown: A place I can't name
+    reputation: A culture of Secrecy
+    ideal: Compassion
+    flaw: Reckless
+    dream: Meeting my God
