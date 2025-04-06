@@ -10,4 +10,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Initialize elements
     initializeNav();
     initializeDropdown();
+
+    // Wait for transition animation to finish before hiding
+    const overlay = document.getElementById("loading-overlay");
+    overlay.classList.add("loading-hidden");
 });

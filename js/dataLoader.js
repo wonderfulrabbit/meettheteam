@@ -24,18 +24,23 @@ export async function loadCharacters() {
             abilityList[name] || {},
             classList[name] || {}
         );
+  
+       
+
         return acc;
     }, {});
 }
 
 async function loadLists() {
-    const characterList = await loadYAML("../data/characters.yaml");
-    const inventoryList = await loadYAML("../data/inventory.yaml");
-    const abilityList = await loadYAML("../data/abilities.yaml");
-    const classList = await loadYAML("../data/class.yaml");
-
+    const [characterList, inventoryList, abilityList, classList] = await Promise.all([
+      loadYAML("../data/characters.yaml"),
+      loadYAML("../data/inventory.yaml"),
+      loadYAML("../data/abilities.yaml"),
+      loadYAML("../data/class.yaml")
+    ]);
+  
     return { characterList, inventoryList, abilityList, classList };
-}
+  }
 
 async function loadYAML(location) {
     const response = await fetch(location);
