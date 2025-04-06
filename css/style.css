@@ -132,7 +132,7 @@ ol li::before {
 #loading-overlay {
 	position: fixed;
 	inset: 0;
-	background: rgba(0, 0, 0, 0.5); /* dark background */
+	background: rgba(0, 0, 0, 0.7); /* dark background */
 	display: flex;
 	align-items: center;
 	justify-content: center;
