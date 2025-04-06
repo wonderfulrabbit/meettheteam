@@ -51,7 +51,7 @@ ol{
 ol li {
 	counter-increment: item;
 	position: relative;
-	padding-left: 2.2em;
+	padding-left: 2.5em;
 	margin: 0.8em 0;
 	min-height: 1.6em;
 }
@@ -69,6 +69,16 @@ ol li::before {
 	text-align: center;
 	line-height: 1.6em;
 	font-weight: 600;
+}
+
+ol li::after {
+  content: "";
+  position: absolute;
+  left: 2em;
+  right: 0;
+  bottom: 0.1em;
+  height: 2px;
+  background: currentColor;
 }
 
 /* Keep all previous card styles */
