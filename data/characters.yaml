@@ -14,7 +14,6 @@ root:
   ideal: compassion
   flaw: reckless
   dream: meeting my God
-  img: "../img/root.png"
 
 coin:
   name: Coin
@@ -32,4 +31,3 @@ coin:
   ideal: pleasure
   flaw: oblivious
   dream: to become human
-  img: "#"

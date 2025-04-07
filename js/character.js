@@ -38,13 +38,6 @@ export class Character {
         ];
     
         elements.forEach((el, i) => el.textContent = values[i]);
-
-        const imageContainer = document.querySelector("#character-image");    
-        imageContainer.innerHTML = "";
-        
-        const img = document.createElement("img");
-        img.src = this.profile.img;   
-        imageContainer.appendChild(img);
     }
     
     #updateInventoryHTML() {
