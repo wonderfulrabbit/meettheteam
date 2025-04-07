@@ -14,10 +14,7 @@ root:
   ideal: compassion
   flaw: reckless
   dream: meeting my God
-  inventory:
-    - A pair of Tiger Claws
-    - A pair of gauntlets
-    - Friendly Flute
+  img: "../img/root.png"
 
 coin:
   name: Coin
@@ -35,3 +32,4 @@ coin:
   ideal: pleasure
   flaw: oblivious
   dream: to become human
+  img: "#"
